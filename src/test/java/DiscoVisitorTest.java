@@ -14,7 +14,7 @@ public class DiscoVisitorTest {
 
        DiscoVisitor visitor = new DiscoVisitor();
 
-       assertEquals("CD:{Artista=Djavan,Ano de lançamento=1982,Estilo=MPB}",cd.aceitar(visitor));
+       assertEquals("CD:{Artista=Djavan,Ano de lançamento=1982,Estilo=MPB}",visitor.exibir(cd));
     }
 
     @Test
@@ -23,7 +23,7 @@ public class DiscoVisitorTest {
 
         DiscoVisitor visitor = new DiscoVisitor();
 
-        assertEquals("DVD:{Nome do Filme=IT,Ano de lançamento=2017,Gênero=Terror}",dvd.aceitar(visitor));
+        assertEquals("DVD:{Nome do Filme=IT,Ano de lançamento=2017,Gênero=Terror}",visitor.exibir(dvd));
     }
 
     @Test
@@ -32,6 +32,6 @@ public class DiscoVisitorTest {
 
         DiscoVisitor visitor = new DiscoVisitor();
 
-        assertEquals("BluRay:{Nome do Jogo=Marvel vs Capcom Infinite,Ano de lançamento=2017,Produtora=Capcom}",bluRay.aceitar(visitor));
+        assertEquals("BluRay:{Nome do Jogo=Marvel vs Capcom Infinite,Ano de lançamento=2017,Produtora=Capcom}",visitor.exibir(bluRay));
     }
 }
